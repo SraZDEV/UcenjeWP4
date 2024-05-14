@@ -8,12 +8,12 @@ go
 use novabaza;
 
 create table tablica(
-prvo int not null,
+prvo int primary key identity(1,1) not null,
 drugo bit ,
 trece varchar(5)
 );
 
 create table drugatablica(
-drugaprvo int not null,
+drugaprvo int primary key identity(1,1) not null,
 drugodrugo varchar(5)
 );
