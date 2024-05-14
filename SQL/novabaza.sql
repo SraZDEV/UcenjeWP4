@@ -12,3 +12,8 @@ prvo int not null,
 drugo bit ,
 trece varchar(5)
 );
+
+create table drugatablica(
+drugaprvo int not null,
+drugodrugo varchar(5)
+);
