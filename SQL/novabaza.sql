@@ -9,6 +9,6 @@ use novabaza;
 
 create table tablica(
 prvo int not null,
-drugo bit not null,
+drugo bit ,
 trece varchar(5)
 );
