@@ -28,7 +28,7 @@ id int not null primary key identity(10000,1),
 ime varchar(25) not null,
 prezime varchar(50) not null,
 email varchar(155) not null,
-grupa int,
+grupa int not null,
 clan_od datetime not null
 );
 
@@ -38,7 +38,7 @@ naziv varchar(155) not null,
 clan int not null,
 privatni_trener int not null,
 kolicina_clanova int not null,
-cijena decimal(10,2) not null
+cijena decimal(10,2)
 );
 
 alter table grupe add foreign key (id) references clanovi(id);
