@@ -24,7 +24,7 @@ email varchar(155) not null
 );
 
 create table clanovi(
-id int not null primary key identity(1000,1),
+id int not null primary key identity(10000,1),
 ime varchar(25) not null,
 prezime varchar(50) not null,
 email varchar(155) not null,
