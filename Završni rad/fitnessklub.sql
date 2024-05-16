@@ -12,7 +12,8 @@ id int not null primary key identity(1,1),
 ime varchar(25) not null,
 prezime varchar(50) not null,
 email varchar(155) not null,
-"password" varchar(25) not null
+userid varchar(25) not null,
+pass varchar(25) not null
 );
 
 create table privatni_treneri(
