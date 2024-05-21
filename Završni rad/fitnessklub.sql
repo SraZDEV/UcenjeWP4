@@ -13,7 +13,7 @@ ime varchar(25) not null,
 prezime varchar(50) not null,
 email varchar(155) not null,
 userid varchar(25) not null,
-pass varchar(25) not null
+pwd varchar(25) not null
 );
 
 create table privatni_treneri(
