@@ -31,7 +31,7 @@ prezime varchar(50) not null,
 email varchar(155) not null,
 grupa int not null,
 clan_od datetime not null,
-verificiran bit
+verificiran bit not null
 );
 
 create table grupe(
@@ -40,7 +40,7 @@ naziv varchar(155) not null,
 clan int not null,
 privatni_trener int not null,
 kolicina_clanova int not null,
-cijena decimal(10,2) not null
+cijena decimal(5,2) not null
 );
 
 alter table clanovi add foreign key (id) references grupe(id);
