@@ -13,7 +13,7 @@ ime varchar(25) not null,
 prezime varchar(50) not null,
 email varchar(155) not null,
 userid varchar(25) not null,
-pass varchar(25) not null
+pwd varchar(25) not null
 );
 
 create table privatni_treneri(
@@ -29,7 +29,7 @@ ime varchar(25) not null,
 prezime varchar(50) not null,
 email varchar(155) not null,
 grupa int not null,
-clan_od datetime not null
+verificiran bit not null
 );
 
 create table grupe(
@@ -37,7 +37,7 @@ id int not null primary key identity(10,1),
 naziv varchar(155) not null,
 clan int not null,
 privatni_trener int not null,
-kolicina_clanova int not null,
+maxclanova int not null,
 cijena decimal(10,2)
 );
 
