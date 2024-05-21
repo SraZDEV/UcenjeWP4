@@ -30,7 +30,8 @@ ime varchar(25) not null,
 prezime varchar(50) not null,
 email varchar(155) not null,
 grupa int not null,
-clan_od datetime not null
+clan_od datetime not null,
+verificiran bit
 );
 
 create table grupe(
