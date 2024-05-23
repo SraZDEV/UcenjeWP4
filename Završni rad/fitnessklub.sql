@@ -43,5 +43,5 @@ kolicina_clanova int not null,
 cijena decimal(5,2) not null
 );
 
-alter table clanovi add foreign key (id) references grupe(id);
-alter table grupe add foreign key (id) references privatni_treneri(id);
+alter table clanovi add foreign key (grupa) references grupe(id);
+alter table grupe add foreign key (privatni_trener) references privatni_treneri(id);
