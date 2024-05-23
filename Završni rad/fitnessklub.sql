@@ -25,7 +25,7 @@ cijena_sat decimal(3,2) not null
 );
 
 create table clanovi(
-id int not null primary key identity(10000,1),
+id int not null primary key identity(10,1),
 ime varchar(25) not null,
 prezime varchar(50) not null,
 email varchar(155) not null,
@@ -37,11 +37,18 @@ verificiran bit not null
 create table grupe(
 id int not null primary key identity(10,1),
 naziv varchar(155) not null,
-clan int not null,
 privatni_trener int not null,
 kolicina_clanova int not null,
 cijena decimal(5,2) not null
 );
 
+create table privatni_trening(
+privatni_trener int not null,
+clan int not null,
+cijenaSesije decimal(5,2)
+);
+
 alter table clanovi add foreign key (grupa) references grupe(id);
 alter table grupe add foreign key (privatni_trener) references privatni_treneri(id);
+alter table privatni_trening add foreign key (privatni_trener) references privatni_treneri(id);
+alter table privatni_trening add foreign key (clan) references clanovi(id);
