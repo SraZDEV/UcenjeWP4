@@ -169,8 +169,8 @@ insert into privatni_trening (privatni_trener, clan) values
 (2,57),
 (1,60);
 
-select * from radnici;
-select * from privatni_treneri;
-select * from grupe;
-select * from clanovi;
-select * from privatni_trening;
+--select * from radnici;
+--select * from privatni_treneri;
+--select * from grupe;
+--select * from clanovi;
+--select * from privatni_trening;
