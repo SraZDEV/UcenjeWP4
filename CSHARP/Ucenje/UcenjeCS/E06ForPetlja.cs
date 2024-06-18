@@ -150,6 +150,7 @@ namespace UcenjeCS
 
             //beskonačna petlja
             // Unesi broj između 1 i 10
+            /*
             // u programiranju brojevi se nalaze na brojevnoj kružnici
             Console.WriteLine(int.MaxValue);
             int max = int.MaxValue;
@@ -168,11 +169,51 @@ namespace UcenjeCS
                 break;
             }
             Console.WriteLine(broj);
+            */
 
-            //
+            Console.WriteLine("****************");
 
+            niz = PodaciInt.niz;
 
+            Console.WriteLine(niz.Length);
+            /*
+            for(int i= 0; i<niz.Length; i++)
+            {
+                Console.WriteLine(niz[i]);
+            }
+            */
 
+            // Postoji li dva ista broja? Ako postoji koji je to broj?
+            /*
+            for (int i = 0; i < niz.Length; i++)
+            {
+                if(i%10000==0)
+                {
+                    Console.Write("*");
+                }
+                for (int j = i+1; j < niz.Length; j++)
+                {
+                    if (niz[i] == niz[j])
+                    {
+                        Console.WriteLine(niz[i]);
+                        goto kraj;
+                    }
+                }
+               
+            }
+
+            kraj:
+            Console.WriteLine("****************");
+            */
+
+            string[] imena = PodaciString.Niz;
+
+            Console.WriteLine(imena.Length);
+            //string je isto niz, niz znakova
+            string grad = "Osijek";
+
+            Console.WriteLine(grad[0]);
+            Console.WriteLine(grad[grad.Length - 1]);
 
 
 
