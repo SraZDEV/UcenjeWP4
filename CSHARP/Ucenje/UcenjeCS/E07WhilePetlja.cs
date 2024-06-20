@@ -46,15 +46,15 @@ namespace UcenjeCS
 
             brojDo = 10;
             b = 1;
-            int i = 2;
-            while(i>b && i < brojDo)
+            int j = 2;
+            while(j>b && j < brojDo) // može ići i || te !(ne/not)
             {
-                Console.WriteLine(i++);
+                Console.WriteLine(j++);
             }
 
+            Console.WriteLine("************");
 
-
-
+            //isto se gnjezdi i prekida iznutra prema van s "goto label"
 
 
 
