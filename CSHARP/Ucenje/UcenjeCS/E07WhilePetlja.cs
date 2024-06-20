@@ -12,6 +12,7 @@ namespace UcenjeCS
         {
             // ponoviti 
             // u "for" petlju se ne mora uopće ući
+            
             int brojDo = 1; // ovo može unjeti korisnik
 
             for(int i=1; i< brojDo; i++)
@@ -33,19 +34,23 @@ namespace UcenjeCS
                 Console.WriteLine("Kod u beskonačnoj petlji while");
                 break; //"continue" radi isto kao i u "for" petlji
             }
-
-
-
+            
             // ispiši prvih 10 brojeva
             b = 0;
-            while (b < 10)
+            while (++b < 10)
             {
-                Console.WriteLine(++b);
+                Console.WriteLine(b);
             }
+            Console.WriteLine("Nakon petlje: " + b);
 
 
-
-
+            brojDo = 10;
+            b = 1;
+            int i = 2;
+            while(i>b && i < brojDo)
+            {
+                Console.WriteLine(i++);
+            }
 
 
 
