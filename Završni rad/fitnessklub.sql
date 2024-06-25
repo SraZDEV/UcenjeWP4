@@ -7,15 +7,6 @@ go
 
 use fitnessklub;
 
-create table radnici(
-id int not null primary key identity(1,1),
-ime varchar(25) not null,
-prezime varchar(50) not null,
-email varchar(155) not null,
-userid varchar(25),
-pwd varchar(25)
-);
-
 create table privatni_treneri(
 id int not null primary key identity(1,1),
 ime varchar(25) not null,
@@ -52,15 +43,6 @@ alter table grupe add foreign key (privatni_trener) references privatni_treneri(
 alter table privatni_trening add foreign key (privatni_trener) references privatni_treneri(id);
 alter table privatni_trening add foreign key (clan) references clanovi(id);
 
---select * from radnici;
-
-insert into radnici (ime,prezime,email) values 
-('Pero','Perić','peroperic@gmail.com'),
-('Mirko','Perić','mirkoperic@gmail.com'),
-('Hrvoje','Trnat','hrvoje12315@live.com'),
-('Petra','Trnat','petrica29@yahoo.com'),
-('Dražen','Kalazić','thekalazic@gmail.com'),
-('Boris','Tot','btot44@gmail.com');
 
 --select * from privatni_treneri;
 
@@ -169,7 +151,6 @@ insert into privatni_trening (privatni_trener, clan) values
 (2,57),
 (1,60);
 
---select * from radnici;
 --select * from privatni_treneri;
 --select * from grupe;
 --select * from clanovi;
