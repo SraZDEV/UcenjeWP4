@@ -36,7 +36,21 @@ namespace UcenjeCS
             }
 
             Console.WriteLine(Tip4(2, 8));
+
+
+            //ispiši sve prim brojeve od dva unesena broja
+            int odBroja = Pomocno.UcitajCijeliBroj("Unesi od broja");
+            int doBroja = Pomocno.UcitajCijeliBroj("Unesi do broja");
+            for (int i =  odBroja;
+                i < doBroja ; i++)
+            {
+                if (primBroj(i))
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
+
 
         // Tip 1. Metoda ne prima parametre i ne vraća vrijednost
         // ovdje je deklarirana, napisana
@@ -67,7 +81,7 @@ namespace UcenjeCS
             Console.WriteLine("Hello {0} {1}", ime, prezime);
         }
 
-        
+
 
         // Tip 3. metoda ne prima parametre i vraća vrijednost
         static int Tip3()
@@ -80,7 +94,7 @@ namespace UcenjeCS
             return '7'; //"return" vraća vrijednost onome tko je pozvao metodu
             // vraća prema ACSII tablici...
         }
-        
+
         // Tip 4. NAJBITNIJI metoda prima parametre, metoda vraća vrijednost
         // protected je vidljiv u ovoj klasi u svim podklasama (OOP - kasnije)
 
@@ -104,6 +118,21 @@ namespace UcenjeCS
 
         }
 
+
+        // primjer metode s više "return" izraza
+
+        static bool primBroj(int broj)
+        {
+            for (int i = 2; i < broj; i++)
+            {
+                if (broj % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
 
 
     }
