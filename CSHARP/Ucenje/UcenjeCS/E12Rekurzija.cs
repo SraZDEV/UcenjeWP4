@@ -8,7 +8,7 @@ namespace UcenjeCS
 {
     internal class E12Rekurzija
     {
-
+        /*
         // Rekurzija je kada metoda poziva samu sebe - nedovoljna definicija
 
         public static void Izvedi()
@@ -43,7 +43,7 @@ namespace UcenjeCS
         }
 
 
-
+        */
 
     }
 }

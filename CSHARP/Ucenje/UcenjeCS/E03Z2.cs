@@ -11,7 +11,7 @@ namespace UcenjeCS
         public static void Izvedi() 
         {
             // Korisnik unosi dva decimalna broja
-            // Program ispisuje veći ili jednaki su ako su uneseni brojevi jednaki
+            // Program ispisuje veći ili jednaki, ako su uneseni brojevi jednaki
             //
 
 
