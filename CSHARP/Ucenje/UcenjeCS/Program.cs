@@ -15,7 +15,11 @@ using UcenjeCS.E13KlasaObjekt;
 
 
 
-UcenjeCS.E13KlasaObjekt.Program.Izvedi();
+new UcenjeCS.E15RadSaStringovima.Program();
+
+//new UcenjeCS.E14Nasljedivanje.Program(); // ide se samo do klase označene (new označava pozivanje konstruktora)
+
+//UcenjeCS.E13KlasaObjekt.Program.Izvedi();
 
 //E12Rekurzija.Izvedi();
 
