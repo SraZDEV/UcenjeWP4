@@ -13,9 +13,9 @@ using UcenjeCS.E13KlasaObjekt;
 
 
 
+new UcenjeCS.E16GenericiLambdaIEkstenzije.Program();
 
-
-new UcenjeCS.E15RadSaStringovima.Program();
+//new UcenjeCS.E15RadSaStringovima.Program();
 
 //new UcenjeCS.E14Nasljedivanje.Program(); // ide se samo do klase označene (new označava pozivanje konstruktora)
 

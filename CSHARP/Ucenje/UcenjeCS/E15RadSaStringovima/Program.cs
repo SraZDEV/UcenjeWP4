@@ -48,7 +48,7 @@ namespace UcenjeCS.E15RadSaStringovima
             sb.Append(" b");
             sb.Append('c'); // radi se da ne moraš svaki puta raditi novu varijablu, a svakako moraš napraviti novu varijablu
 
-            Console.WriteLine(sb); // tu se poziva metoda "ToString"
+            Console.WriteLine(sb); // tu se poziva metoda "ToString" sb=string builder
 
             // var ce = s.GetEnumerator(); ce = CharEnumerator
 
