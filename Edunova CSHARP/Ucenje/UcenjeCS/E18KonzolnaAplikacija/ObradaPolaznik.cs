@@ -6,21 +6,20 @@ namespace UcenjeCS.E18KonzolnaAplikacija
     internal class ObradaPolaznik
     {
 
-        public List<Polaznik> Polaznici { get; set; }
+        public List<Polaznik>  Polaznici { get; set; }
 
-        public ObradaPolaznik()
-        {
+        public ObradaPolaznik() 
+        { 
             Polaznici = new List<Polaznik>();
             if (Pomocno.DEV)
             {
                 UcitajTestnePodatke();
             }
-
         }
 
         private void UcitajTestnePodatke()
         {
-            for (int i = 0; i < 10; i++)
+            for(int i = 0; i < 10; i++)
             {
                 Polaznici.Add(new()
                 {
@@ -43,7 +42,7 @@ namespace UcenjeCS.E18KonzolnaAplikacija
 
         private void OdabirOpcijeIzbornika()
         {
-            switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
+           switch(Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
             {
                 case 1:
                     PrikaziPolaznike();
@@ -54,26 +53,41 @@ namespace UcenjeCS.E18KonzolnaAplikacija
                     PrikaziIzbornik();
                     break;
                 case 3:
-                    PromjeniPodatkePolaznika();
+                    PromjeniPodatakPolaznika();
                     PrikaziIzbornik();
                     break;
-                case 5:
+                case 4:
+                    ObrisiPolaznika();
+                    PrikaziIzbornik();
+                    break;
+                case 5:                    
                     Console.Clear();
                     break;
             }
         }
 
+        private void ObrisiPolaznika()
+        {
+            PrikaziPolaznike();
+            var odabrani = Polaznici[
+                Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika za brisanje",
+                1, Polaznici.Count) - 1
+                ];
+            if (Pomocno.UcitajBool("Sigurno obrisati " + odabrani.Ime + " " + odabrani.Prezime + "? (DA/NE)", "da"))
+            {
+                Polaznici.Remove(odabrani);
+            }
+        }
 
-
-        private void PromjeniPodatkePolaznika()
+        private void PromjeniPodatakPolaznika()
         {
             PrikaziPolaznike();
             var odabrani = Polaznici[
                 Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika za promjenu",
-                1, Polaznici.Count) - 1
+                1,Polaznici.Count)-1
                 ];
             odabrani.Sifra = Pomocno.UcitajRasponBroja("Unesi šifru polaznika", 1, int.MaxValue);
-            odabrani.Ime = Pomocno.UcitajString("Unesi ime polaznika", 50, true);
+            odabrani.Ime = Pomocno.UcitajString(odabrani.Ime,"Unesi ime polaznika", 50, true);
             odabrani.Prezime = Pomocno.UcitajString("Unesi prezime polaznika", 50, true);
             odabrani.Email = Pomocno.UcitajString("Unesi email polaznika", 50, true);
             odabrani.OIB = Pomocno.UcitajString("Unesi OIB polaznika", 50, true);

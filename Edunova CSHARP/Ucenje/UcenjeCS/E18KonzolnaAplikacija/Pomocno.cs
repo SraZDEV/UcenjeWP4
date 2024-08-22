@@ -3,7 +3,8 @@
     internal class Pomocno
     {
 
-        public static bool DEV = false;
+        public static bool DEV=false;
+
         internal static bool UcitajBool(string poruka, string trueValue)
         {
             Console.Write(poruka + ": ");
@@ -93,6 +94,26 @@
                 if ( (obavezno && s.Length==0) || s.Length > max)
                 {
                     Console.WriteLine("Unos obavezan, maksimalno dozvoljeno {0} znakova",max);
+                    continue;
+                }
+                return s;
+            }
+        }
+
+        internal static string UcitajString(string stara,string poruka, int max, bool obavezno)
+        {
+            string s;
+            while (true)
+            {
+                Console.Write(poruka + " (" + stara + "): ");
+                s = Console.ReadLine().Trim();
+                if (s.Length == 0)
+                {
+                    return stara;
+                }
+                if ((obavezno && s.Length == 0) || s.Length > max)
+                {
+                    Console.WriteLine("Unos obavezan, maksimalno dozvoljeno {0} znakova", max);
                     continue;
                 }
                 return s;
