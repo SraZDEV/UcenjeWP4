@@ -25,7 +25,7 @@ namespace UcenjeCS
             }
         }
 
-        public static int UcitajCijeliBroj(string poruka)
+        public static int UcitajCijeliBroj(string poruka, int v, int v1)
         {
             while (true)
             {
