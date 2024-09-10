@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Formatters;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,27 +9,39 @@ namespace UcenjeCS
 {
     internal class E06ForPetlja
     {
+
+
         public static void Izvedi()
         {
 
+            // Ispiši 10 puta Osijek
+            Console.WriteLine("Osijek");
+            Console.WriteLine("Osijek");
+            Console.WriteLine("Osijek");
+            Console.WriteLine("Osijek");
+            Console.WriteLine("Osijek");
+            Console.WriteLine("Osijek");
+            Console.WriteLine("Osijek");
+            Console.WriteLine("Osijek");
+            Console.WriteLine("Osijek");
+            Console.WriteLine("Osijek");
+
+            Console.WriteLine("*************************");
 
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine("Osijek");
             }
 
-            Console.WriteLine("****************");
-
+            Console.WriteLine("*************************");
 
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(i);
             }
 
-
-            Console.WriteLine("****************");
-
-            //zbrojiti prvih 100 brojeva
+            Console.WriteLine("*************************");
+            // Zbrojiti prvih 100 brojeva
             int suma = 0;
             for (int i = 1; i <= 100; i++)
             {
@@ -36,28 +49,16 @@ namespace UcenjeCS
             }
             Console.WriteLine(suma);
 
-            Console.WriteLine("****************");
-
-
-            //ispiši sve parne brojeve od 3 do 29
+            Console.WriteLine("*************************");
+            // ispiši sve parne brojeve od 3 do 29
             // loše rješenje
             for (int i = 4; i < 29; i = i + 2)
             {
                 Console.WriteLine(i);
             }
-            Console.WriteLine("****************");
-            // dobro rješenje
-            for (int i = 3; i < 29; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
-            }
-            Console.WriteLine("****************");
-            //još bolje
-            int brojOd = 3;  //ovo se može učitati od korisnika
-            int brojDo = 29;  // ovo se može učitati od korisnika
+            Console.WriteLine("*************************");
+            int brojOd = 3; // ovo se može učitati od korisnika
+            int brojDo = 29; // ovo se može učitati od korisnika
             // u nastavku u kodu nema konstanti
             for (int i = brojOd; i < brojDo; i++)
             {
@@ -65,11 +66,11 @@ namespace UcenjeCS
                 {
                     Console.WriteLine(i);
                 }
+
             }
-            Console.WriteLine("****************");
+            Console.WriteLine("*************************");
 
-
-            int[] niz = { 2, 3, 4, 5, 1, 2, 3, 4, 2, 4 };
+            int[] niz = { 2, 3, 2, 3, 2, 2, 3, 34, 4, 5 };
 
             for (int i = 0; i < niz.Length; i++)
             {
@@ -77,29 +78,34 @@ namespace UcenjeCS
             }
 
 
-            Console.WriteLine("****************");
-            //ispiši sve brojeve od 20 do 10
-            for (int i = 20; i >= 10; i--)
+            Console.WriteLine("*************************");
+            // Ispiši sve brojeve od 20 do 10
+            for(int i = 20; i >= 10; i--)
             {
                 Console.WriteLine(i);
             }
+            Console.WriteLine("*************************");
 
-            Console.WriteLine("****************");
-            // primarni broj = djeljiv bez ostatka (samo sa 1 ili samim sobom)
-            // algoritam za ispis prim brojeva // ispiši sve prim brojeve od 2 do 14
+
+            // Ispiši sve prim brojeve od 2 do 14
+            int ukupno = 0;
             bool prim;
-            for (int i = 2; i < 1400; i++)
+            for(int i = 2; i < 1400; i++)
             {
                 prim = true;
-                for (int j = 2; j < i; j++)
+                for(int j = 2; j < i; j++)
                 {
-                    //Console.WriteLine("{0} % {1} = {2}", i, j, i % j);
-                    if (i % j == 0)
+                    //Console.WriteLine("{0} % {1} = {2}", i,j,i%j);
+                    if(i%j== 0)
                     {
-                        prim = false; // 2000000 da li je prim broj - ne
-                        //Console.WriteLine("Nepotrebno izvođenje");
-                        //prekini unutarnju petlju sa "break"
+                        prim = false; // 2000000 da li je prim broj
+                        // prekini unutarnju petlju jer sve ostale provjere nisu više bitne
                         break;
+                    }
+                    if (!prim)
+                    {
+                       ukupno++;
+                        //Console.WriteLine("Nepotrebno izvođenje " + ++ukupno);
                     }
                 }
                 if (prim)
@@ -107,10 +113,11 @@ namespace UcenjeCS
                     Console.WriteLine(i);
                 }
             }
+            Console.WriteLine("nepotrebno izvodio: " + ukupno);
 
-            Console.WriteLine("****************");
 
-            //preskakanje petlje
+            Console.WriteLine("*************************");
+            // preskakanje petlje
             for (int i = 0; i < 10; i++)
             {
                 if (i == 3)
@@ -124,46 +131,39 @@ namespace UcenjeCS
                 Console.WriteLine(i);
             }
 
-            Console.WriteLine("****************");
-
 
             for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j < 10; j++)
+                for(int j=0; j < 10; j++)
                 {
-                    Console.WriteLine(i * j);
-                    //želim prekinuti vanjsku petlju
+                    Console.WriteLine(i*j);
+                    // želim prekinuti vanjsku petlju: varijabla i
                     goto labela;
                 }
             }
 
 
 
-        labela: //koristi se za prekidanje vanjskih petlji
-            Console.WriteLine("****************");
+        labela:
+            Console.WriteLine("********************");
 
 
 
-
-
-
-
-            //beskonačna petlja
+            // beskonačna petlja
             // Unesi broj između 1 i 10
             /*
-            // u programiranju brojevi se nalaze na brojevnoj kružnici
             Console.WriteLine(int.MaxValue);
             int max = int.MaxValue;
             Console.WriteLine(max+1);
 
             int broj;
-            for (; ; )
+            for(; ; )
             {
                 Console.Write("Unesi broj od 1 do 10: ");
                 broj = int.Parse(Console.ReadLine());
-                if (broj < 1 || broj > 10)
+                if(broj<1 || broj > 10)
                 {
-                    Console.WriteLine("Nisi unio broj u rasponu! ");
+                    Console.WriteLine("Nisi unio broj u rasponu!");
                     continue;
                 }
                 break;
@@ -171,13 +171,13 @@ namespace UcenjeCS
             Console.WriteLine(broj);
             */
 
-            Console.WriteLine("****************");
+            Console.WriteLine("********************");
 
             niz = PodaciInt.niz;
 
             Console.WriteLine(niz.Length);
             /*
-            for(int i= 0; i<niz.Length; i++)
+            for(int i = 0; i < niz.Length; i++)
             {
                 Console.WriteLine(niz[i]);
             }
@@ -185,13 +185,13 @@ namespace UcenjeCS
 
             // Postoji li dva ista broja? Ako postoji koji je to broj?
             /*
-            for (int i = 0; i < niz.Length; i++)
+            for(int i = 0; i < niz.Length; i++)
             {
-                if(i%10000==0)
+                if (i % 10000 == 0)
                 {
                     Console.Write("*");
                 }
-                for (int j = i+1; j < niz.Length; j++)
+                for(int j=i+1;j<niz.Length; j++)
                 {
                     if (niz[i] == niz[j])
                     {
@@ -199,24 +199,36 @@ namespace UcenjeCS
                         goto kraj;
                     }
                 }
-               
             }
 
             kraj:
-            Console.WriteLine("****************");
+            Console.WriteLine("************************");
             */
 
             string[] imena = PodaciString.Niz;
 
             Console.WriteLine(imena.Length);
-            //string je isto niz, niz znakova
+
+            // string je isto niz, niz znakova
             string grad = "Osijek";
 
             Console.WriteLine(grad[0]);
-            Console.WriteLine(grad[grad.Length - 1]);
+            Console.WriteLine(grad[grad.Length-1]);
 
+            // Domaća zadaća. Ispisati tablicu množenja 10x10. Formatirati na ovaj način
+            //  1   2   3   4   5  6   7   8   9   10
+            //  2   4   6   8  10  12  14  16  18  20
+            //  3   6   9  12  15  18  21  24  27  30
+            //  4   8  12  16  20  24  28  32  36  40
+            //  5  10  15  20  25  30  35  40  45  50
+            //  6  12  18  24  30  36  42  48  54  60
+            //  7  14  21  28  35  42  49  56  63  70
+            //  8  16  24  32  40  48  56  64  72  80
+            //  9  18  27  36  45  54  63  72  81  90
+            // 10  20  30  40  50  60  70  80  90 100
 
 
         }
+
     }
 }

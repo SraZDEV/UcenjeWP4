@@ -8,9 +8,11 @@ namespace UcenjeCS
 {
     internal class E01Z8
     {
+
+        // Program ispisuje: Nogometni klub "NK OSIJEK"
         internal static void Izvedi()
         {
-            Console.WriteLine("Nogometni klub \"NK OSIJEK\"");
+            Console.WriteLine("Nogometni klub \"NK OSIJEK\" \u011e");
         }
     }
 }

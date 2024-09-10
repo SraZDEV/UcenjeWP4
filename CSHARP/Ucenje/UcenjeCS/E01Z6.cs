@@ -8,19 +8,18 @@ namespace UcenjeCS
 {
     internal class E01Z6
     {
-        public static void Izvedi() 
+
+        //Program od korisnika učitava ime grada i broj stanovnika.
+        //Ispisuje rečenicu: U XXXXXXX živi XXXXX ljudi.
+        internal static void Izvedi()
         {
-            //Program od korisnika učitava ime grada i broj stanovnika
-            //Ispisuje rečenicu: u XXXXXXX živi XXXX ljudi
-            
-            Console.WriteLine("Upiši ime grada: ");
-            string ime = Console.ReadLine();
-            Console.WriteLine("Upišu broj stanovnika: ");
-            int bs = int.Parse(Console.ReadLine());
-            Console.WriteLine("U {0} živi {1} stanovnika.", ime, bs);
-            
-
-
+            Console.WriteLine("Upiši ime grada");
+            string ime= Console.ReadLine();
+            Console.WriteLine("Upiši broj stanovnika");
+            int bs=int.Parse(Console.ReadLine());
+            Console.WriteLine("U {0} živi {1} broj stanovnika",ime,bs);
         }
+
+
     }
 }

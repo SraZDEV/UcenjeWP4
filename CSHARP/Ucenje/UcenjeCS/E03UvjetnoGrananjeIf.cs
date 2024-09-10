@@ -10,56 +10,56 @@ namespace UcenjeCS
     {
 
 
-
-
-        public static void Izvedi() 
+        public static void Izvedi()
         {
-            int i = 8; //Nisam koristio Console.ReadLine kako bi bili brži
 
-            //uvjetno grananje "if" radi s "bool" tipom podatka
+            int i = 8; // Nisam koristio Console.ReadLine kako bi bili brži
+
+            // uvjetno grananje if radi s bool tipom podatka
 
             bool uvjet = i == 7;
 
             Console.WriteLine(uvjet);
 
-            //minimalna "if" sintaksa
-            if (uvjet) //u if granu se ulazi ako je vrijednost uvjeta "true"
+            // minimalna if sintaksa
+            if (uvjet) // u if granu se ulazi ako je vrijednost uvjeta true
             {
-                Console.WriteLine("1. Ušao sam u if granu");
+                Console.WriteLine("1. Ušao sam u if granu, uvjet je zadovoljen");
             }
-            //dodatak (neobavezni dio) if grananja
-            else 
+            // dodatak (neobavezni dio) if grananja
+            else
             {
                 Console.WriteLine("2. Uvjet nije zadovoljen, otišao u else granu");
             }
 
-            //uobičajena sintaksa što se tiče uvjeta
-            if (i > 2) //ako ne postoje {} if se odnosi samo na 1. sljedeću liniju
+            // uobičajna sintaka što se tiče uvjeta
+            if (i > 2) // ako ne postoje {} if se odnosi samo na 1. sljedeću liniju
                 Console.WriteLine("3. Ušao u if bez vitičastih zagrada");
-                Console.WriteLine("4. Ovo se izvodi bez obzira na gornji if");
+            Console.WriteLine("4. ovo se izvodi bez obzira na gornji if");
 
 
             var j = 2;
 
-            //dodatni operator &(and), &&(and,and), |(or), ||(or,or), !(not)
+            // dodatni operatori & (and), &&, | (or), || (AltGr + W), ! (not)
             if (i < 2 && j == 2)
             {
-                Console.WriteLine("5. logičko &");
+                Console.WriteLine("5. logičko and &");
             }
 
-            //& provjerava oba uvjeta bez obzira što prvi bude "false"
-            //&& ukoliko prvi uvjet bude "false", drugi se ne provjerava
+            // & provjerava oba uvjeta bez obzira što možda prvi bude false
+            // && Ukoliko prvi uvjet bude false drugi se ne provjerava
 
-            if (j == 2 || i < 2) 
+
+            if(j==2 || i < 2)
             {
-                Console.WriteLine("6. logičko or |");
+                Console.WriteLine("6. logičko or | ");
             }
 
-            //"|" provjerava oba uvjeta bez obzira što prvi bude "true"
-            //"||" ukoliko prvi uvjet bude "true", drugi se ne provjerava
+            // | Provjerava oba uvjeta bez obzira što prvi bude true
+            // || Ukoliko prvi uvjet bude true drugi se ne provjerava
 
 
-            if (i != 5) 
+            if (i != 5)
             {
                 Console.WriteLine("7. i nema vrijednost 5");
             }
@@ -69,45 +69,39 @@ namespace UcenjeCS
 
             if (ocjena == 1)
             {
-                Console.WriteLine("8, nedovoljan");
-            }else if (ocjena == 2)
+                Console.WriteLine("8. nedovoljan");
+            }else if(ocjena == 2)
             {
                 Console.WriteLine("9. dovoljan");
             }
-            //da ne pišemo sve
-            else 
+            // da ne pišem sve
+            else
             {
                 Console.WriteLine("10. Ocjena nije dobra");
             }
 
-            //inline "if" (kompliciranija sintaksa)
+            // inline if
             if (ocjena == 4)
             {
                 Console.WriteLine("11. Vrlo dobar si");
             }
-            else 
+            else
             {
                 Console.WriteLine("12. OK si");
             }
-            //ova linija je ekvivalent gornjem if else (prava kompliciranija sintaksa)
-            //ne može se odraditi ukoliko se u oba slučaja ne izvodi ista akcija (WriteLine, Write...etc.)
-            Console.WriteLine(ocjena == 4 ? "11. Vrlo dobar si" : "12. OK si");
+            // ova lnijia je ekvivalent gornjem if else
+            Console.WriteLine(ocjena==4 ? "11. Vrlo dobar si" : "12. OK si");
 
-            //if se može gnijezditi
-            if (i > 0) 
+            // if se može gnjezditi
+            if (i > 0)
             {
-                if (ocjena == 4) 
+                if (ocjena == 4)
                 {
-                    Console.WriteLine("12. Gnježđenje");
+                    Console.WriteLine("12. Gnježđenje se može zapravo zamjeniti s &&");
                 }
             }
-        
-        
-        
-        
+
         }
-
-
 
 
 

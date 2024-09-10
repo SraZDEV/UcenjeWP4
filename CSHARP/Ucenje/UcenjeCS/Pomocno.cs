@@ -11,21 +11,21 @@ namespace UcenjeCS
 
         public static int UcitajCijeliBroj()
         {
-            while (true)
+            while(true)
             {
                 try
                 {
                     Console.Write("Unesi cijeli broj: ");
                     return int.Parse(Console.ReadLine());
                 }
-                catch // i ne mora se staviti exception
+                catch // i ne mora se staviti Exception
                 {
                     Console.WriteLine("Pogreška prilikom unosa!");
                 }
             }
         }
 
-        public static int UcitajCijeliBroj(string poruka, int v, int v1)
+        public static int UcitajCijeliBroj(string poruka)
         {
             while (true)
             {
@@ -34,12 +34,14 @@ namespace UcenjeCS
                     Console.Write(poruka + ": ");
                     return int.Parse(Console.ReadLine());
                 }
-                catch // i ne mora se staviti exception
+                catch // i ne mora se staviti Exception
                 {
                     Console.WriteLine("Pogreška prilikom unosa!");
                 }
             }
         }
+
+
 
     }
 }

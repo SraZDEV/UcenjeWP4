@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Faker;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,40 +10,51 @@ namespace UcenjeCS.E17Subota
     internal class Program
     {
 
-        public Program()
+        public Program() 
         {
-            // u ljetnim mjesecima se čisti svakih mjesec dana ,a zimskim svaka 2 tjedna
-            // 09. 07. 2024. - 14. 7. 2024.,Stan 1
-            // 15. 07. 2024. - 21. 7. 2024.,Stan 2
-            // 22. 07. 2024. - 28. 7. 2024.,Stan 3
 
-            DateTime datumOd = DateTime.Parse("2024-07-08");
-            DateTime datumDo = datumOd;
-            DateTime Tjedan;
-            int broj = 0;
+            var ime1 = "ana";
+            var ime2 = "ivo";
 
-            while (datumOd.Year < 2028)
+            bool ispravno = true;
+
+            foreach (var z in ime1)
             {
-                if (datumDo.Month >= 4 && datumOd.Month <= 10)
+                if (!char.IsLetter(z)) 
                 {
-                    datumDo = datumOd.AddDays(27);
+                    ispravno=false; 
+                    break;
                 }
-                else
-                {
-                    datumDo = datumOd.AddDays(13);
-                }
-                Tjedan = datumOd.AddDays(6);
-
-
-                Console.WriteLine("{0} - {1},{2}",
-                    datumOd.ToString("dd.MM.yyyy."),
-                    Tjedan.ToString("dd.MM.yyyy."),++broj %3 +1);
-                datumOd = datumDo.AddDays(1);
             }
-            // DZ
 
+            if (!ispravno) 
+            {
+                Console.WriteLine("nije dobro");
+                return;
+            }
+
+
+            for(int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(Faker.Name.FullName(NameFormats.StandardWithMiddleWithPrefix));
+
+            }
+
+            string br = "6";
+            int b;
+            if (!int.TryParse(br,out b)){
+                Console.WriteLine("Ne valja");
+            }
+            Console.WriteLine(b);
+
+            int kratko;
+            int.TryParse("7", out kratko);
+
+            Console.WriteLine(kratko);
 
         }
+
+      
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.E14Nasljedivanje
 {
-    internal class StraniDrzavljanin: Osoba
+    internal class StraniDrzavljanin:Osoba
     {
     }
 }

@@ -8,18 +8,24 @@ namespace UcenjeCS
 {
     internal class E01Z5
     {
-        public static void Izvedi()
+
+
+
+
+
+        // Program od korisnika učitava decimalni broj te ispisuje drugi korijen učitanog broja.
+        internal static void Izvedi()
         {
-            //Program od korisnika učitava decimalni broj te ispisuje drugi korije učitanog broja.
+            decimal x;
+            Console.WriteLine("Unesi decimalni broj: ");
+            x = decimal.Parse(Console.ReadLine());
+            double y = Math.Sqrt(decimal.ToDouble(x));
+            Console.WriteLine(y);
 
-            double x;
-            Console.Write("Unesi DECIMALNI broj: ");
-            x = double.Parse(Console.ReadLine());
-            x = Math.Sqrt(x);
-            Console.WriteLine(x);
-
-            Console.WriteLine("Unesi DECIMALNI broj: ");
+            Console.WriteLine("Unesi decimalni broj: ");
             Console.WriteLine(Math.Sqrt(double.Parse(Console.ReadLine())));
+
+            
 
         }
     }

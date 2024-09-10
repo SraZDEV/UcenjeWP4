@@ -8,9 +8,10 @@ namespace UcenjeCS
 {
     internal class E08DoWhilePetlja
     {
+
         public static void Izvedi()
         {
-            // "do while" izdvaja činjenica da će se on barem jednom izvesti
+            // do while izdvaja činjenica da će se on barem jednom izvesti
 
             int i = 0;
 
@@ -20,24 +21,16 @@ namespace UcenjeCS
             } while (i > 0);
 
 
-            //provjera uvjeta je na ulazu i zato se ne mora izvesti
-            while (i>0)
+
+
+            // pvjera uvjeta je na ulazu i zato se ne mora izvesti
+            while (i > 0) 
             {
                 Console.WriteLine("u while " + i);
             }
 
 
-            //svi ostali elementi kao i u "for" i "while"
-
-
-
-
-
-
-
-
-
-
+            // svi ostali elementi kao i u for i while
 
 
         }

@@ -11,10 +11,8 @@ namespace UcenjeCS.E14Nasljedivanje
         public string? Naziv { get; set; }
 
 
-
-        // prepisivanje ("override") metode je kada u podklasi definiramo
+        // prepisivanje (override) metode ja kada u podklasi definiramo
         // metodu istog naziva u nadklasi
-
         public override string ToString()
         {
             Console.WriteLine(VidiSeUPodKlasi);
@@ -24,7 +22,7 @@ namespace UcenjeCS.E14Nasljedivanje
 
 
 
-
-
     }
+
+
 }

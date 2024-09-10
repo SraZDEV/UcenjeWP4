@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.E14Nasljedivanje
 {
-    // "Apstraktna" klasa je klasa koja nema implementaciju
-    // kreira se kako bi sadržavala zajednička svojstva i metode koje će koristiti
+    // čitati https://learn.microsoft.com/en-us/dotnet/api/system.object?view=net-8.0
+    // apstrakna klasa je ona klasa koja nema implementaciju
+    // kreira se kako bi sadržavala zajednička svojtva i metode koje će koristiti
     // sve klase koje ju nasljeđuju
-    internal abstract class Entitet: object // ne mora se uvijek eksplicitno navoditi "object" (sve klase, htjele one to ili ne nasljeđuju klasu "object")
+    internal abstract class Entitet: object // sve klase, htjele one to ili ne, nasljeđuju klasu object
     {
         public int? Sifra { get; set; }
 
@@ -20,10 +21,8 @@ namespace UcenjeCS.E14Nasljedivanje
         public override string ToString()
         {
             Console.WriteLine(VidiSeSamoUKlasiUKojojJeDefinirano);
-            return Sifra.ToString(); // ukoliko je "int" moramo ga vratiti kao ToString
+            return Sifra.ToString();
         }
-
-
 
     }
 }

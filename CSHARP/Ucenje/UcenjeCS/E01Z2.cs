@@ -12,12 +12,11 @@ namespace UcenjeCS
         public static void Izvedi()
         {
             // zadatak
-            // korisnik će unjeti dvoznamenkasti broj
-            // ispisuje se prva znamenka
-            // 56 =>5
-            // 11 =>1
-
-
+            // Korisnik će unijeti dvoznamenkasti broj
+            // Ispisuje se prva znamenka
+            // 56 => 5
+            // 11 => 1
+     
         }
 
     }

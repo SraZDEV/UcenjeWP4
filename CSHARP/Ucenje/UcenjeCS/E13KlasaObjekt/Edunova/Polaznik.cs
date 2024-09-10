@@ -13,8 +13,5 @@ namespace UcenjeCS.E13KlasaObjekt.Edunova
         public string? Prezime { get; set; }
         public string? Oib { get; set; }
         public string? Email { get; set; }
-
-
-
     }
 }

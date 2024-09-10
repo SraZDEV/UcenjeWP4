@@ -18,19 +18,18 @@ namespace UcenjeCS.E13KlasaObjekt.Edunova
 
 
 
-
-        // ovaj gore prop bi u većini drugih programskih jezika (a može i ovdje) izgledao
+        // ovaj gore prop bi u većini drugih programskih jezika (a može i ovdje) izgleda
         private int broj;
-        public int getBroj(){
+
+        public int getBroj()
+        {
             return broj;
         }
-        // this = u ovoj klasi u kojoj se nalaziš
+        // this - u ovoj klasi
         public void setBroj(int broj)
         {
             this.broj = broj;
         }
-
-
 
     }
 }

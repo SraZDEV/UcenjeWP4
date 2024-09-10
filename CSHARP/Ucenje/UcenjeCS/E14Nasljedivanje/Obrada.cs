@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.E14Nasljedivanje
 {
-
     // polimorfizam: pozornica
     internal abstract class Obrada
     {

@@ -11,14 +11,10 @@ namespace UcenjeCS
 
         public static void Izvedi()
         {
-        
-            // Program unosi dva cijela broja i ispisuje njihov zbroj
-
-            
-
-
+            // zadatak
+            // Korisnik unosi dva cijela broja i ispisuje njihov zbroj
+     
         }
-
 
     }
 }
