@@ -4,43 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace UcenjeCS
 {
     internal class CiklicnaTablica
     {
-        public static void Izvedi()
+        internal static void Izvedi()
         {
-            int rows = Pomocno.UcitajCijeliBroj("Unesi broj redova", 1, 20);
-            int columns = Pomocno.UcitajCijeliBroj("Unesi broj stupaca", 1, 20);
+            int rows = Pomocno.UcitajCijeliBroj("Unesi broj redova", 1, 10);
+            int columns = Pomocno.UcitajCijeliBroj("Unesi broj stupaca", 1, 10);
 
             int[,] table = new int[rows, columns];
-            int bottomRow = rows - 1;
+            int botRow = rows - 1;
             int leftColumn = 0;
             int topRow = 0;
             int rightColumn = columns - 1;
             int currentNum = 1;
 
             Console.WriteLine();
-            Console.WriteLine("Redova: {0} - Stupaca: {1} - Ukupno: {2}", rows, columns, table.Length);
-            Console.WriteLine("*********************");
+            Console.WriteLine("Redova= {0},  Stupaca= {1},  Ukupno= {2}", rows, columns, table.Length);
+            Console.WriteLine("____________________________________");
 
             for (int t = 0; currentNum <= table.Length; t++)
             {
                 for (int i = rightColumn; i >= leftColumn; i--)
                 {
-                    table[bottomRow, i] = currentNum++;
+                    table[botRow, i] = currentNum++;
                 }
-                bottomRow--;
+                botRow--;
 
-                for (int i = bottomRow; i >= topRow; i--)
+                for (int i = botRow; i >= topRow; i--)
                 {
                     table[i, leftColumn] = currentNum++;
                 }
                 leftColumn++;
 
-                if (topRow <= bottomRow)
+                if (topRow <= botRow)
                 {
                     for (int i = leftColumn; i <= rightColumn; i++)
                     {
@@ -50,7 +48,7 @@ namespace UcenjeCS
                 }
                 if (leftColumn <= rightColumn)
                 {
-                    for (int i = topRow; i <= bottomRow; i++)
+                    for (int i = topRow; i <= botRow; i++)
                     {
                         table[i, rightColumn] = currentNum++;
                     }
