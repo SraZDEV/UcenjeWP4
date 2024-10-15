@@ -8,7 +8,7 @@ namespace UcenjeCS
 {
     internal class CiklicnaTablica
     {
-        internal static void Izvedi()
+        public static void Izvedi()
         {
             int rows = Pomocno.UcitajCijeliBroj("Unesi broj redova", 1, 10);
             int columns = Pomocno.UcitajCijeliBroj("Unesi broj stupaca", 1, 10);

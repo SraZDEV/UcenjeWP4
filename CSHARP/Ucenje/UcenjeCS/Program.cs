@@ -5,7 +5,9 @@
 using UcenjeCS;
 //using UcenjeCS.E13KlasaObjekt;
 
-CiklicnaTablica.Izvedi();
+LjubavniKalkulator.Izvedi();
+
+//CiklicnaTablica.Izvedi();
 
 //new UcenjeCS.E17Subota.Raspored();
 
