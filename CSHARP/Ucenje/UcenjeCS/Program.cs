@@ -1,11 +1,13 @@
-﻿
+﻿using UcenjeCS;
 
 
 
-using UcenjeCS;
+
+//new UcenjeCS.E18KonzolnaAplikacija.Pomocno();
+
 //using UcenjeCS.E13KlasaObjekt;
 
-LjubavniKalkulator.Izvedi();
+//LjubavniKalkulator.Izvedi();
 
 //CiklicnaTablica.Izvedi();
 
